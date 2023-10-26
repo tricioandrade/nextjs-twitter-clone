@@ -7,6 +7,10 @@ import Link from "next/link";
 
 const  NAVIGATION_ITEMS  =  [
     {
+        title: '',
+        icon: BsTwitter
+    },
+    {
         title: 'Home',
         icon: BiHomeCircle
     },
@@ -33,11 +37,8 @@ const  NAVIGATION_ITEMS  =  [
 ];
 const LeftSideBar = () => {
     return (
-        <section className="fixed w-[275p]  flex flex-col items-stretch h-screen">
+        <section className="fixed w-[275px] flex flex-col items-stretch h-screen px-4">
             <div className='w-flex flex-col items-stretch h-full space-y-4 mt-4'>
-                <Link href={'/'}>
-                    <BsTwitter />
-                </Link>
                 {
                     NAVIGATION_ITEMS.map( (item) => (
                         <Link
@@ -52,11 +53,11 @@ const LeftSideBar = () => {
                         </Link>
                     ))
                 }
-                <button className="rounded-full m-4 bg-primary px-6 p-4 text-2xl text-center hover:bg-opacity-70 transition duration-200">
+                <button className="rounded-full m-4 bg-primary p-4 text-2xl text-center hover:bg-opacity-70 transition duration-200 w-full">
                     Tweet
                 </button>
             </div>
-            <button className="rounded-full m-4 bg-transparent px-6 p-4 text-center hover:bg-white/10 transition duration-200 w-full justify-between">
+            <button className="rounded-full flex items-center m-4 bg-transparent  p-4 text-center hover:bg-white/10 transition duration-200 w-full justify-between">
                 <div className='flex items-center space-x-2'>
                     <div className='rounded-full bg-slate-400 w-10 h-10'></div>
                     <div className='text-left text-sm'>
